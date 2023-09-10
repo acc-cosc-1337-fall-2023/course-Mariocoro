@@ -1,14 +1,22 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-#include "catch.hpp"
 #include "hwexpressions.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
+const double tax_rate = 0.0675;
 
-TEST_CASE("Verify sum_numbers function") 
+//example
+int add_numbers(int num1, int num2)
 {
-	REQUIRE(add_numbers(5, 5) == 10);
-	REQUIRE(add_numbers(10, 10) == 20);
+	return num1 + num2;
 }
 
+//write function code here
+
+double get_sales_tax_amount(double meal_amount)
+{
+  return tax_rate * meal_amount;
+}
+
+
+double get_tip_amount(double meal_amount, double tip_rate)
+{
+  return meal_amount * tip_rate;
+}
